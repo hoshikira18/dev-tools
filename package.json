@@ -16,12 +16,15 @@
   "dependencies": {
     "lint-staged": "^15.2.10",
     "next": "14.2.14",
+    "next-auth": "^5.0.0-beta.22",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/node": "22.7.4",
+    "@types/react": "18.3.11",
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
     "husky": "^9.1.6",
