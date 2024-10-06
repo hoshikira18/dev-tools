@@ -1,12 +1,20 @@
 import Link from 'next/link';
 import React from 'react';
 
-const Button = ({ children, type, href, className = '', otherProps }) => {
+const Button = ({
+  children,
+  type,
+  onClick,
+  href,
+  className = '',
+  otherProps,
+}) => {
   const Component = href ? Link : 'button';
   const props = {
     ...otherProps,
     type,
     href,
+    onClick,
     className,
   };
 
