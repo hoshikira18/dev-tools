@@ -87,7 +87,7 @@ const GithubDeleteTemplate = ({ session, repos }) => {
         {repoValues.length == 0 ? (
           <div>Không có repos nào!</div>
         ) : (
-          <div className="grid max-h-full gap-5 overflow-auto px-2 md:grid-cols-2">
+          <div className="grid max-h-full gap-5 overflow-auto px-2 pb-20 md:grid-cols-2">
             {repoValues.map((repo) => {
               return (
                 <RepoCard
