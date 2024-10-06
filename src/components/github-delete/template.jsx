@@ -9,6 +9,7 @@ const GithubDeleteTemplate = ({ session, repos }) => {
   const [chosenRepos, setChosenRepos] = useState([]);
   const [repoValues, setRepoValues] = useState(repos);
   const [searchKeyword, setSearchKeyword] = useState('');
+
   const handleDelete = async (e) => {
     setIsLoading(true);
     const res = await fetch('/api/delete', {
