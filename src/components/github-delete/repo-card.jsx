@@ -13,7 +13,7 @@ const RepoCard = ({ repo, chosenRepos, setChosenRepos }) => {
           }
         });
       }}
-      className="flex items-center justify-between space-y-3 rounded-md border-2 border-white/30 p-5"
+      className="flex h-20 items-center justify-between space-y-3 rounded-md border-2 border-white/30 p-5"
     >
       <Link
         href={repo.clone_url}
