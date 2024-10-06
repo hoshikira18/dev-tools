@@ -33,8 +33,8 @@ const GithubDeleteTemplate = ({ session, repos }) => {
   }, [searchKeyword, repos]);
 
   return (
-    <div className="flex items-center justify-center bg-black text-white/90 md:h-screen md:px-5">
-      <div className="w-full space-y-5 rounded-md bg-secondary p-5 md:p-10 lg:w-2/3">
+    <div className="flex justify-center bg-black text-white/90 md:h-screen md:px-5 md:py-10">
+      <div className="relative w-full space-y-5 overflow-hidden rounded-md bg-secondary p-5 md:p-10 lg:w-2/3">
         <div className="flex flex-col items-center justify-between space-y-2">
           <p className="text-2xl font-semibold tracking-wider">
             Github repositories
@@ -42,7 +42,7 @@ const GithubDeleteTemplate = ({ session, repos }) => {
           <div className="flex items-center space-x-2">
             <Button
               onClick={() => {
-                repos.forEach((r) =>
+                repoValues.forEach((r) =>
                   setChosenRepos((pre) => [
                     ...pre,
                     r.owner.login + '/' + r.name,
@@ -87,7 +87,7 @@ const GithubDeleteTemplate = ({ session, repos }) => {
         {repoValues.length == 0 ? (
           <div>Không có repos nào!</div>
         ) : (
-          <div className="grid h-full gap-5 overflow-auto px-2 md:h-[60vh] md:grid-cols-2">
+          <div className="grid max-h-full gap-5 overflow-auto px-2 md:grid-cols-2">
             {repoValues.map((repo) => {
               return (
                 <RepoCard
@@ -100,6 +100,7 @@ const GithubDeleteTemplate = ({ session, repos }) => {
             })}
           </div>
         )}
+        <div className="absolute bottom-0 left-0 right-0 h-10 bg-secondary"></div>
       </div>
     </div>
   );
